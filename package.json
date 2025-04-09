@@ -1,0 +1,9 @@
+{
+  "private": "true",
+  "type": "module",
+  "version": "0.0.1-alpha.0",
+  "devDependencies": {
+    "nx": "20.7.2"
+  },
+  "packageManager": "pnpm@10.8.0"
+}
