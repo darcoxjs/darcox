@@ -6,7 +6,8 @@
   "scripts": {
     "commit": "cz",
     "format": "prettier \"**/*.{js,mjs,ts,jsx.tsx,json,html,yml,yaml,css,less,scss,md}\" --ignore-path ./.prettierignore --write",
-    "lint": "eslint --config eslint.config.mjs --fix"
+    "lint": "eslint --config eslint.config.mjs --fix",
+    "changelog": "conventional-changelog -p gitmoji-config -i CHANGELOG.md -s -r 0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
@@ -16,6 +17,7 @@
     "@types/node": "18.16.9",
     "commitizen": "^4.3.1",
     "commitlint-config-gitmoji": "^2.3.1",
+    "conventional-changelog-cli": "^5.0.0",
     "cz-customizable": "^7.4.0",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^10.1.2",
