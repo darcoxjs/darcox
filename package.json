@@ -6,28 +6,23 @@
   "scripts": {
     "commit": "cz",
     "format": "prettier \"**/*.{js,mjs,ts,jsx.tsx,json,html,yml,yaml,css,less,scss,md}\" --ignore-path ./.prettierignore --write",
-    "lint": "eslint --config eslint.config.mjs --fix",
-    "changelog": "conventional-changelog -p gitmoji-config -i CHANGELOG.md -s -r 0"
+    "lint-code": "oxlint -c .oxlintrc.json",
+    "changelog": "conventional-changelog -p gitmoji-config -i CHANGELOG.md -s"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
     "@commitlint/types": "^19.8.0",
-    "@eslint/js": "^9.8.0",
-    "@nx/eslint": "20.7.2",
     "@types/node": "18.16.9",
     "commitizen": "^4.3.1",
     "commitlint-config-gitmoji": "^2.3.1",
     "conventional-changelog-cli": "^5.0.0",
     "cz-customizable": "^7.4.0",
-    "eslint": "^9.8.0",
-    "eslint-config-prettier": "^10.1.2",
-    "eslint-plugin-prettier": "^5.2.6",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.0",
     "nx": "20.7.2",
+    "oxlint": "^0.16.5",
     "prettier": "^3.5.3",
-    "typescript": "~5.7.2",
-    "typescript-eslint": "^8.19.0"
+    "typescript": "~5.7.2"
   },
   "config": {
     "commitizen": {
@@ -39,7 +34,7 @@
       "prettier --ignore-path ./.prettierignore --write"
     ],
     "**/*.{js,ts,jsx,tsx,vue}": [
-      "eslint --config eslint.config.mjs --fix"
+      "pnpm lint-code -- --fix"
     ]
   },
   "nx": {
