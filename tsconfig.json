@@ -1,4 +1,3 @@
 {
-  "extends": ["./tsconfig.base.json"],
-  "include": ["commitlint.config.ts", "vitest.workspace.ts"]
+  "extends": ["./tsconfig.base.json"]
 }
