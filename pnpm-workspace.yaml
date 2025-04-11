@@ -1,2 +1,6 @@
 onlyBuiltDependencies:
+  - dprint
   - nx
+
+packages:
+  - packages/*
