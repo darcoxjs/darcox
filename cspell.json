@@ -1,0 +1,45 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "ignorePaths": [
+    "**/node_modules",
+    "**/dist",
+    "*.snap",
+    "*.node",
+    "*.tsbuildinfo",
+    "*.json",
+    "*.toml",
+    "*.css",
+    "*.svg",
+    "*.data",
+    "*.d.ts",
+    "/target",
+    "/temp",
+    "/tmp",
+    "/CHANGELOG.md",
+    "/pnpm-lock.yaml",
+    "*.wasm",
+    "*.text",
+    "*.go"
+  ],
+  "languageSettings": [
+    {
+      // VSCode languageId. i.e. typescript, java, go, cpp, javascript, markdown, latex
+      // * will match against any file type.
+      "languageId": "*",
+      // Language locale. i.e. en-US, de-AT, or ru. * will match all locales.
+      // Multiple locales can be specified like: "en, en-US" to match both English and English US.
+      "locale": "*",
+      // To exclude patterns, add them to "ignoreRegExpList"
+      "ignoreRegExpList": [
+        "/import\\s.*/",
+        // To ignore pattern like `](#some-anchor)`
+        "\\]\\(#[^)]*\\)"
+      ],
+      // List of dictionaries to enable by name in `dictionaryDefinitions`
+      "dictionaries": [],
+      // Dictionary definitions can also be supplied here. They are only used if "languageId" and "locale" match.
+      "dictionaryDefinitions": []
+    }
+  ],
+  "words": ["gitmoji", "darcoxjs", "darcox"]
+}
