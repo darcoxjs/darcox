@@ -39,7 +39,7 @@
     "**/*.{js,ts,jsx,tsx,vue}": [
       "pnpm lint-code -- --fix"
     ],
-    "*": "cspell --no-progress --gitignore"
+    "*": "cspell --no-progress --gitignore --no-must-find-files"
   },
   "nx": {
     "includedScripts": []
