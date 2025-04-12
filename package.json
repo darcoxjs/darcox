@@ -7,7 +7,7 @@
     "commit": "cz",
     "format": "dprint fmt",
     "lint-code": "oxlint -c .oxlintrc.json",
-    "lint-spell": "cspell \"**\" --no-progress  --gitignore",
+    "lint-spell": "cspell \"**\" --no-progress --gitignore",
     "changelog": "conventional-changelog -p gitmoji-config -i CHANGELOG.md -s"
   },
   "devDependencies": {
@@ -39,7 +39,7 @@
     "**/*.{js,ts,jsx,tsx,vue}": [
       "pnpm lint-code -- --fix"
     ],
-    "*": "cspell --no-progress --gitignore --no-must-find-files"
+    "*": "cspell --no-progress --gitignore"
   },
   "nx": {
     "includedScripts": []
