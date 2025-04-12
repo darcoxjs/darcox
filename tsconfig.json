@@ -1,3 +1,25 @@
 {
-  "extends": ["./tsconfig.base.json"]
+  "compilerOptions": {
+    "moduleResolution": "bundler",
+    "module": "ESNext",
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "sourceMap": true,
+    "importHelpers": true,
+    "baseUrl": "."
+  },
+  "include": ["packages/**/*", "./*.ts", "./*.js"],
+  "exclude": [
+    "node_modules",
+    "**/dist/**",
+    "**/*.spec.ts"
+  ]
 }
