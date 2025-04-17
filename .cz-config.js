@@ -1,3 +1,4 @@
+// @ts-check
 export const types = [
   { value: ':building_construction: build', name: '🏗️  build:    打包发布' },
   { value: ':construction_worker: ci', name: '👷 ci:       持续集成' },

@@ -8,23 +8,40 @@
     "format": "dprint fmt",
     "lint-code": "oxlint -c .oxlintrc.json",
     "lint-spell": "cspell \"**\" --no-progress --gitignore",
-    "changelog": "conventional-changelog -p gitmoji-config -i CHANGELOG.md -s"
+    "changelog": "conventional-changelog -p gitmoji-config -i CHANGELOG.md -s",
+    "dev": "ts-node ./scripts/dev.ts"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
     "@commitlint/types": "^19.8.0",
-    "@types/node": "18.16.9",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/lodash": "^4.17.16",
+    "@types/node": "22.14.1",
+    "chokidar": "^4.0.3",
     "commitizen": "^4.3.1",
     "commitlint-config-gitmoji": "^2.3.1",
     "conventional-changelog-cli": "^5.0.0",
+    "cross-env": "^7.0.3",
     "cspell": "^8.18.1",
     "cz-customizable": "^7.4.0",
     "dprint": "^0.49.1",
+    "electron": "^35.1.5",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.0",
+    "lodash": "^4.17.21",
     "nx": "20.7.2",
     "oxlint": "^0.16.5",
     "prettier": "^3.5.3",
+    "reflect-metadata": "^0.2.2",
+    "rollup": "^4.40.0",
+    "rollup-plugin-dts": "^6.2.1",
+    "rollup-plugin-rm": "^1.0.2",
+    "rxjs": "^7.8.2",
+    "tree-kill": "^1.2.2",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.8.1",
     "typescript": "~5.7.2"
   },
   "config": {
@@ -34,12 +51,12 @@
   },
   "lint-staged": {
     "**/*.{js,mjs,ts,jsx.tsx,json,html,yml,yaml,css,less,scss,md}": [
-      "dprint fmt"
+      "dprint fmt",
+      "cspell --no-progress --gitignore --no-must-find-files"
     ],
     "**/*.{js,ts,jsx,tsx,vue}": [
       "pnpm lint-code -- --fix"
-    ],
-    "*": "cspell --no-progress --gitignore --no-must-find-files"
+    ]
   },
   "nx": {
     "includedScripts": []

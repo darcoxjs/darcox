@@ -1,0 +1,29 @@
+{
+  "name": "@darcox/core",
+  "type": "module",
+  "version": "v0.0.1-alpha.0",
+  "license": "MIT",
+  "author": "GirlFriendNotFoundException",
+  "description": "Darcox core library",
+  "keywords": ["electron", "decorator", "reflect-metadata"],
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "files": ["dist"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darcoxjs/darcox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/darcoxjs/darcox/issues"
+  },
+  "homepage": "https://github.com/darcoxjs/darcox/tree/main/packages/core#readme",
+  "scripts": {
+    "build": "cross-env TARGET=core rollup -c ../../rollup.config.ts"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "electron": ">=32.0.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": ">=7.8.0"
+  }
+}

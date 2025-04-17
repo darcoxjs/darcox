@@ -41,5 +41,15 @@
       "dictionaryDefinitions": []
     }
   ],
-  "words": ["gitmoji", "darcoxjs", "darcox", "vite", "vitest"]
+  "words": [
+    "gitmoji",
+    "darcoxjs",
+    "darcox",
+    "vite",
+    "vitest",
+    "asar",
+    "rolldown",
+    "winstaller",
+    "esbuild"
+  ]
 }

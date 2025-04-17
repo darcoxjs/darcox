@@ -1,6 +1,10 @@
 onlyBuiltDependencies:
   - dprint
+  - electron
+  - electron-winstaller
+  - esbuild
   - nx
 
 packages:
   - packages/*
+  - playground
