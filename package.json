@@ -9,6 +9,10 @@
     "lint-code": "oxlint -c .oxlintrc.json",
     "lint-spell": "cspell \"**\" --no-progress --gitignore",
     "changelog": "conventional-changelog -p gitmoji-config -i CHANGELOG.md -s",
+    "test": "vitest",
+    "test-unit": "vitest --project unit",
+    "test-e2e": "vitest --project e2e",
+    "test-coverage": "vitest run --project unit --coverage",
     "dev": "ts-node ./scripts/dev.ts"
   },
   "devDependencies": {
@@ -17,8 +21,10 @@
     "@rollup/plugin-commonjs": "^28.0.3",
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-typescript": "^12.1.2",
+    "@swc/core": "^1.11.21",
     "@types/lodash": "^4.17.16",
     "@types/node": "22.14.1",
+    "@vitest/coverage-v8": "^3.1.1",
     "chokidar": "^4.0.3",
     "commitizen": "^4.3.1",
     "commitlint-config-gitmoji": "^2.3.1",
@@ -42,7 +48,9 @@
     "tree-kill": "^1.2.2",
     "ts-node": "^10.9.2",
     "tslib": "^2.8.1",
-    "typescript": "~5.7.2"
+    "typescript": "~5.7.2",
+    "unplugin-swc": "^1.5.1",
+    "vitest": "^3.1.1"
   },
   "config": {
     "commitizen": {

@@ -1,6 +1,9 @@
 {
   "extends": ["./tsconfig.json"],
   "include": ["packages/**/*.spec.ts"],
+  "compilerOptions": {
+    "types": ["vitest/globals"]
+  },
   "exclude": [
     "node_modules",
     "**/dist/**"
