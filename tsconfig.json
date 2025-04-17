@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "outDir": "dist",
+    "declaration": false,
     "moduleResolution": "bundler",
     "module": "ESNext",
     "target": "ESNext",
@@ -8,15 +10,12 @@
     "skipLibCheck": true,
     "strict": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "declaration": true,
-    "sourceMap": true,
-    "importHelpers": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "baseUrl": "."
   },
-  "include": ["packages/**/*", "./*.ts", "./*.js"],
+  "include": ["packages/**/*", "scripts/**/*", "./*.ts", "./*.js"],
   "exclude": [
     "node_modules",
     "**/dist/**",

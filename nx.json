@@ -1,12 +1,15 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "defaultBase": "master",
-  "plugins": [
-    {
-      "plugin": "@nx/eslint/plugin",
-      "options": {
-        "targetName": "lint"
-      }
+  "targetDefaults": {
+    "start": {
+      "dependsOn": ["^build"]
+    },
+    "package": {
+      "dependsOn": ["^build"]
+    },
+    "make": {
+      "dependsOn": ["^build"]
     }
-  ]
+  },
+  "defaultProject": "electron-app"
 }
