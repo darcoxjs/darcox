@@ -6,13 +6,14 @@
   "scripts": {
     "commit": "cz",
     "format": "dprint fmt",
-    "lint-code": "oxlint -c .oxlintrc.json",
-    "lint-spell": "cspell \"**\" --no-progress --gitignore",
+    "lint": "pnpm lint:code --fix && pnpm lint:spell",
+    "lint:code": "oxlint -c .oxlintrc.json",
+    "lint:spell": "cspell \"**\" --no-progress --gitignore",
     "changelog": "conventional-changelog -p gitmoji-config -i CHANGELOG.md -s",
     "test": "vitest",
-    "test-unit": "vitest --project unit",
-    "test-e2e": "vitest --project e2e",
-    "test-coverage": "vitest run --project unit --coverage",
+    "test:unit": "vitest --project unit",
+    "test:e2e": "vitest --project e2e",
+    "test:coverage": "vitest run --project unit --coverage",
     "dev": "ts-node ./scripts/dev.ts"
   },
   "devDependencies": {
@@ -63,7 +64,7 @@
       "cspell --no-progress --gitignore --no-must-find-files"
     ],
     "**/*.{js,ts,jsx,tsx,vue}": [
-      "pnpm lint-code -- --fix"
+      "pnpm lint:code --fix"
     ]
   },
   "nx": {
