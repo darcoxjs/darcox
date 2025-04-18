@@ -31,3 +31,4 @@ import './index.css';
 console.info(
   '👋 This message is being logged by "renderer.ts", included via Vite',
 );
+
